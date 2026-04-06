@@ -286,3 +286,39 @@ class GAQuery:
     @property
     def separate_editions(self) -> Optional[bool]:
         return self.__separate_editions
+    
+    def __str__(self):
+        printVal = ""
+
+        # Name
+        if (self.__name is not None):
+            printVal += ("Name: " + self.__name + "\n")
+        # Sets
+        if (self.__sets is not None):
+            printVal += ("Sets: ")
+            for setName in self.__sets:
+                printVal += (setName + " ")
+            printVal += "\n"
+        # Elements
+        if (self.__elements is not None):
+            printVal += ("Elements: ")
+            for elem in self.__elements:
+                printVal += (elem + " ")
+            printVal += "\n"
+        # Classes
+        if (self.__classes is not None):
+            printVal += ("Classes: ")
+            for gaClass in self.__classes:
+                printVal += (gaClass + " ")
+            printVal += "\n"
+        # Types
+        if (self.__types is not None):
+            printVal += ("Types: ")
+            for gaTypes in self._types:
+                printVal += (gaTypes + " ")
+            printVal += "\n"
+        # Effect
+        if (self.__effect is not None):
+            printVal += ("Effect: " + self.__effect + "\n")
+
+        return printVal
