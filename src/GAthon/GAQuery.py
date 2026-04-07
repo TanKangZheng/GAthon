@@ -128,11 +128,11 @@ class GAQuery:
         return self.__subtypes
     
     # Logical Operations
-    __operations: Optional[list[str]] = None
+    __operations: Optional[list[tuple[enums.LogicParameter, enums.LogicOperator, int]]] = None
     def add_operation(self, param: enums.LogicParameter, operator: enums.LogicOperator, val:int) -> "GAQuery":
         if (self.__operations is None):
             self.__operations = []
-        self.__operations.append((param.value, operator.value, str(val)))
+        self.__operations.append((param, operator, str(val)))
         return self
     def clear_operations(self) -> "GAQuery":
         self.__operations = None
@@ -303,22 +303,83 @@ class GAQuery:
         if (self.__elements is not None):
             printVal += ("Elements: ")
             for elem in self.__elements:
-                printVal += (elem + " ")
+                printVal += (elem.value + " ")
             printVal += "\n"
         # Classes
         if (self.__classes is not None):
             printVal += ("Classes: ")
             for gaClass in self.__classes:
-                printVal += (gaClass + " ")
+                printVal += (gaClass.value + " ")
             printVal += "\n"
         # Types
         if (self.__types is not None):
             printVal += ("Types: ")
-            for gaTypes in self._types:
-                printVal += (gaTypes + " ")
+            for gaType in self.__types:
+                printVal += (gaType.value + " ")
             printVal += "\n"
         # Effect
         if (self.__effect is not None):
             printVal += ("Effect: " + self.__effect + "\n")
+        # Rarities
+        if (self.__rarities is not None):
+            printVal += ("Rarities: ")
+            for rarity in self.__rarities:
+                printVal += (rarity.value + " ")
+            printVal += "\n"
+        # Subtypes
+        if (self.__subtypes is not None):
+            printVal += ("Subtypes: ")
+            for subtype in self.__subtypes:
+                printVal += (subtype.value + " ")
+            printVal += "\n"
+        # Logical Operations
+        if (self.__operations is not None):
+            for operation in self.__operations:
+                printVal += ("Operation: " + operation[0].name + " " + operation[1].name + " " + operation[2] + "\n")
+        # Speeds
+        if (self.__speeds is not None):
+            printVal += ("Speeds: ")
+            for speed in self.__speeds:
+                printVal += (speed.value + " ")
+            printVal += "\n"
+        # Configuration
+        if (self.__configuration is not None):
+            printVal += ("Configuration: ")
+            for config in self.__configuration:
+                printVal += (config.value + " ")
+            printVal += "\n"
+        # Collector Number
+        if (self.__collector_number is not None):
+            printVal += ("Collector Number: " + str(self.__collector_number) + "\n")
+        # Illustrator
+        if (self.__illustrator is not None):
+            printVal += ("Illustrator: " + self.__illustrator + "\n")
+        # Languages
+        if (self.__languages is not None):
+            printVal += ("Languages: ")
+            for lang in self.__languages:
+                printVal += (lang.value + " ")
+            printVal += "\n"
+        # Flavor
+        if (self.__flavor is not None):
+            printVal += ("Flavor: " + self.__flavor + "\n")
+        # Slug
+        if (self.__slug is not None):
+            printVal += ("Slug: " + self.__slug + "\n")
+        # Legality
+        if (self.__legality is not None):
+            printVal += ("Legality: " + self.__legality[0].name + " " + self.__legality[1].name + "\n")
+        # Edition Effect
+        if (self.__edition_effect is not None):
+            printVal += ("Edition Effect: " + self.__edition_effect + "\n")
+        # Edition Slug
+        if (self.__edition_slug is not None):
+            printVal += ("Edition Slug: " + self.__edition_slug + "\n")
+        # Collab
+        if (self.__collab is not None):
+            printVal += ("Collab: " + str(self.__collab) + "\n")
+        # Separate Editions
+        if (self.__separate_editions is not None):
+            printVal += ("Separate Editions: " + str(self.__separate_editions) + "\n")
 
         return printVal

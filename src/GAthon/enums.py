@@ -1,6 +1,6 @@
 from enum import Enum
 
-class Elements(str, Enum):
+class Elements(Enum):
     # Basic Elements
     NORM    = "NORM"
     WIND    = "WIND"
@@ -17,7 +17,7 @@ class Elements(str, Enum):
     TERA    = "TERA"
     UMBRA   = "UMBRA"
 
-class Classes(str, Enum):
+class Classes(Enum):
     ANOMALY     = "ANOMALY"
     ASSASSIN    = "ASSASSIN"
     CLERIC      = "CLERIC"
@@ -28,7 +28,7 @@ class Classes(str, Enum):
     TAMER       = "TAMER"
     WARRIOR     = "WARRIOR"
 
-class Types(str, Enum):
+class Types(Enum):
     ACTION      = "ACTION"
     ALLY        = "ALLY"
     ATTACK      = "ATTACK"
@@ -43,7 +43,7 @@ class Types(str, Enum):
     UNIQUE      = "UNIQUE"
     WEAPON      = "WEAPON"
 
-class Rarity (int, Enum):
+class Rarity (Enum):
     COMMON      = 1
     UNCOMMON    = 2
     RARE        = 3
@@ -54,7 +54,7 @@ class Rarity (int, Enum):
     C_ULTRA_RARE= 8
     C_PROMO_RARE= 9
 
-class Subtypes (str, Enum):
+class Subtypes (Enum):
     ACCESSORY       = "ACCESSORY"
     ADJUVANT        = "ADJUVANT"
     AETHERCHARGE    = "AETHERCHARGE"
@@ -201,7 +201,7 @@ class Subtypes (str, Enum):
     WHIP            = "WHIP"
     WOLF            = "WOLF"
 
-class LogicParameter (str, Enum):
+class LogicParameter (Enum):
     # Card Stats
     MEMORY_COST         = "cost_memory"
     RESERVE_COST        = "cost_reserve"
@@ -227,31 +227,31 @@ class LogicParameter (str, Enum):
     FOIL_THEMA_MYSTI    = "thema_mystique_foil"
     FOIL_THEMA_VALOR    = "thema_valor_foil"
 
-class LogicOperator (str, Enum):
+class LogicOperator (Enum):
     EQUAL_TO            = "%253D"
     LESS_THAN           = "%253C"
     GREATER_THAN        = "%253E"
     LESS_THAN_OR_EQUAL  = "%253C%253D"
     MORE_THAN_OR_EQUAL  = "%253E%253D"
 
-class Speed (str, Enum):
+class Speed (Enum):
     FAST = "fast"
     SLOW = "slow"
     NONE = "none"
 
-class Configuration (str, Enum):
+class Configuration (Enum):
     DEFAULT = "default"
     FLIP    = "flip"
 
-class Language (str, Enum):
+class Language (Enum):
     ENGLISH = "EN"
     CHINESE = "CN"
 
-class Format (str, Enum):
+class Format (Enum):
     STANDARD    = "STANDARD"
     DRAFT       = "DRAFT"
     PANTHEON    = "PANTHEON"
 
-class Legality (str, Enum):
+class Legality (Enum):
     LEGAL       = "LEGAL"
     RESTRICTED  = "RESTRICTED"

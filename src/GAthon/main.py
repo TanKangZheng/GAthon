@@ -3,9 +3,8 @@ import GAQuery
 import enums
 
 query = GAQuery.GAQuery()
-query.add_name("Test")
-query.add_set("RDO").add_set("RDOP")
-query.add_element(enums.Elements.ASTRA)
+query.add_operation(enums.LogicParameter.NONFOIL_THEMA_MYSTI, enums.LogicOperator.GREATER_THAN, 4)
+query.add_legality(enums.Format.PANTHEON, enums.Legality.LEGAL)
 
 print(query)
 
