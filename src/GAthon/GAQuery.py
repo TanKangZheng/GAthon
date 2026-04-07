@@ -1,6 +1,18 @@
+# Helper Libraries
 import enums
-from dataclasses import dataclass, field
+import json
+
+# # Python Libraries
+import httpx
+from urllib.parse import quote_plus
+from dataclasses import dataclass
 from typing import Optional
+
+# --- HTTPX --- #
+client = httpx.Client()
+
+# --- API Params --- #
+api_link = "https://api.gatcg.com/cards/search?"
 
 @dataclass
 class GAQuery:
@@ -46,6 +58,9 @@ class GAQuery:
     @property
     def elements(self) -> Optional[list[enums.Elements]]:
         return self.__elements
+    @property
+    def all_element(self) -> Optional[bool]:
+        return self.__all_elements
 
     # Classes
     __classes: Optional[list[enums.Classes]] = None
@@ -64,6 +79,9 @@ class GAQuery:
     @property
     def classes(self) -> Optional[list[enums.Classes]]:
         return self.__classes
+    @property
+    def all_class(self) -> Optional[bool]:
+        return self.__all_classes
     
     # Card Types
     __types: Optional[list[enums.Types]] = None
@@ -82,6 +100,9 @@ class GAQuery:
     @property
     def types(self) -> Optional[list[enums.Types]]:
         return self.__types
+    @property
+    def all_type(self) -> Optional[bool]:
+        return self.__all_types
     
     # Effects
     __effect: Optional[str] = None
@@ -126,6 +147,9 @@ class GAQuery:
     @property
     def subtypes(self) -> Optional[list[enums.Subtypes]]:
         return self.__subtypes
+    @property
+    def all_subtype(self) -> Optional[bool]:
+        return self.__all_subtypes
     
     # Logical Operations
     __operations: Optional[list[tuple[enums.LogicParameter, enums.LogicOperator, int]]] = None
@@ -383,3 +407,56 @@ class GAQuery:
             printVal += ("Separate Editions: " + str(self.__separate_editions) + "\n")
 
         return printVal
+    
+def Search(query: GAQuery):
+    query_params = []
+
+    #-----------------------------#
+    # --- Start Parsing Query --- #
+    #-----------------------------#
+
+    # Name
+    if (query.name is not None):
+        query_params.append(f"name={quote_plus(query.name)}")
+
+    # Sets
+    if (query.sets is not None):
+        for setInfo in query.sets:
+            query_params.append(f"prefix={setInfo}")
+
+    # Elements
+    if (query.elements is not None):
+        for element in query.elements:
+            query_params.append(f"element={element.value}")
+    if (query.all_element is True):
+        query_params.append(f"element_logic=AND")
+
+    # Classes
+    if (query.classes is not None):
+        for gaclass in query.classes:
+            query_params.append(f"class={gaclass.value}")
+    if (query.all_class is True):
+        query_params.append("class_logic=AND")
+
+    # Types
+    if (query.all_type is True):
+        query_params.append("type_logic=AND")
+    if (query.types is not None):
+        for gatype in query.types:
+            query_params.append(f"type={gatype.value}")
+
+    #-----------------------------#
+    # ---  End Parsing Query  --- #
+    #-----------------------------#
+
+    param_list = "&".join(query_params)
+
+    response = client.get(api_link, params=param_list)
+    print(f"Fetching data from {response.url}")
+    if (response.status_code == 200):
+        data = response.json()
+        with open("data.json", "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+    else:
+        print("Error fetching response!")
+    
