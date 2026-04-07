@@ -228,11 +228,11 @@ class LogicParameter (Enum):
     FOIL_THEMA_VALOR    = "thema_valor_foil"
 
 class LogicOperator (Enum):
-    EQUAL_TO            = "%253D"
-    LESS_THAN           = "%253C"
-    GREATER_THAN        = "%253E"
-    LESS_THAN_OR_EQUAL  = "%253C%253D"
-    MORE_THAN_OR_EQUAL  = "%253E%253D"
+    EQUAL_TO            = "="
+    LESS_THAN           = "<"
+    GREATER_THAN        = ">"
+    LESS_THAN_OR_EQUAL  = "<="
+    MORE_THAN_OR_EQUAL  = ">="
 
 class Speed (Enum):
     FAST = "fast"

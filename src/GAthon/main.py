@@ -4,8 +4,11 @@ import enums
 GAQuery.set_client("GAthon", "0.0.1", "tankangzheng@hotmail.com")
 
 queryInfo = GAQuery.GAQuery()
-queryInfo.add_type(enums.Types.ACTION)
-queryInfo.add_type(enums.Types.ATTACK)
+queryInfo.add_element(enums.Elements.TERA)
+queryInfo.add_class(enums.Classes.MAGE)
+queryInfo.add_operation(enums.LogicParameter.RESERVE_COST, enums.LogicOperator.GREATER_THAN, 3)
+queryInfo.add_speed(enums.Speed.FAST)
+queryInfo.add_speed(enums.Speed.SLOW)
 
 GAQuery.Search(query=queryInfo)
 

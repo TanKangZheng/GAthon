@@ -456,6 +456,36 @@ def Search(query: GAQuery):
         for gatype in query.types:
             query_params.append(f"type={gatype.value}")
 
+    # Effect
+    if (query.effect is not None):
+        query_params.append(f"effect={query.effect}")
+
+    # Rarities
+    if (query.rarities is not None):
+        for rarity in query.rarities:
+            query_params.append(f"rarity={rarity.value}")
+
+    # Subtypes
+    if (query.all_subtype is True):
+        query_params.append("subtype_logic=AND")
+    if (query.subtypes is not None):
+        for subtype in query.subtypes:
+            query_params.append(f"subtype={subtype.value}")
+
+    # Logical Operators
+    if (query.operations is not None):
+        operations_str = ""
+        for i in range(len(query.operations)):
+            operations_str += query.operations[i][0].value + query.operations[i][1].value + str(query.operations[i][2])
+            if (i is not (len(query.operations) - 1)):
+                operations_str += ";"
+        query_params.append(f"stats={operations_str}")
+
+    # Speed
+    if (query.speeds is not None):
+        for speed in query.speeds:
+            query_params.append(f"speed={speed.value}")
+
     #-----------------------------#
     # ---  End Parsing Query  --- #
     #-----------------------------#
