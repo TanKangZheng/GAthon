@@ -1,6 +1,8 @@
 import GAQuery
 import enums
 
+GAQuery.set_client("GAthon", "0.0.1", "tankangzheng@hotmail.com")
+
 queryInfo = GAQuery.GAQuery()
 queryInfo.add_type(enums.Types.ACTION)
 queryInfo.add_type(enums.Types.ATTACK)

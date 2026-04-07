@@ -9,10 +9,17 @@ from dataclasses import dataclass
 from typing import Optional
 
 # --- HTTPX --- #
-client = httpx.Client()
+client: Optional[httpx.Client] = None
 
 # --- API Params --- #
 api_link = "https://api.gatcg.com/cards/search?"
+
+def set_client(app_name: str, ver: str, contact: str = None):
+    global client
+    user_agent = f"{app_name}/{ver}"
+    if (contact is not None):
+        user_agent += f"{contact}"
+    client = httpx.Client(headers={"User-Agent": user_agent})
 
 @dataclass
 class GAQuery:
@@ -409,6 +416,10 @@ class GAQuery:
         return printVal
     
 def Search(query: GAQuery):
+
+    if (client is None):
+        return
+
     query_params = []
 
     #-----------------------------#
