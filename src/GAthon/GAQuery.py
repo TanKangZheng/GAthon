@@ -203,8 +203,8 @@ class GAQuery:
         return self.__configuration
     
     # Collector Number
-    __collector_number: Optional[int] = None
-    def add_collector_number(self, num: int) -> "GAQuery":
+    __collector_number: Optional[str] = None
+    def add_collector_number(self, num: str) -> "GAQuery":
         self.__collector_number = num
         return self
     def clear_collector_number(self) -> "GAQuery":
@@ -288,6 +288,18 @@ class GAQuery:
     def edition_effect(self) -> Optional[str]:
         return self.__edition_effect
     
+    # Edition Flavor
+    __edition_flavor: Optional[str] = None
+    def add_edition_flavor(self, flavor: str) -> "GAQuery":
+        self.__edition_flavor = flavor
+        return self
+    def clear_edition_flavor(self) -> "GAQuery":
+        self.__edition_flavor = None
+        return self
+    @property
+    def edition_flavor(self) -> Optional[str]:
+        return self.__edition_flavor
+
     # Edition Slug
     __edition_slug: Optional[str] = None
     def add_edition_slug(self, text: str) -> "GAQuery":
@@ -485,6 +497,57 @@ def Search(query: GAQuery):
     if (query.speeds is not None):
         for speed in query.speeds:
             query_params.append(f"speed={speed.value}")
+
+    # Configuration
+    if (query.configuration is not None):
+        for config in query.configuration:
+            query_params.append(f"configuration={config.value}")
+
+    # Collector Number
+    if (query.collector_number is not None):
+        query_params.append(f"collector_number={query.collector_number}")
+
+    # Illustrator
+    if (query.illustrator is not None):
+        query_params.append(f"illustrator={query.illustrator}")
+
+    # Language
+    if (query.languages is not None):
+        for language in query.languages:
+            query_params.append(f"language={language.value}")
+
+    # Flavor
+    if (query.flavor is not None):
+        query_params.append(f"flavor={query.flavor}")
+
+    # Slug
+    if (query.slug is not None):
+        query_params.append(f"slug={query.slug}")
+
+    # Legality
+    if (query.legality is not None):
+        query_params.append(f"legality_format={query.legality[0].value}")
+        query_params.append(f"legality_state={query.legality[1].value}")
+
+    # Edition Effect
+    if (query.edition_effect is not None):
+        query_params.append(f"edition_effect={query.edition_effect}")
+
+    # Edition Flavor
+    if (query.edition_flavor is not None):
+        query_params.append(f"edition_flavor={query.edition_flavor}")
+
+    # Edition Slug
+    if (query.edition_slug is not None):
+        query_params.append(f"edition_slug={query.edition_slug}")
+
+    # Collaborations
+    if (query.collab is True):
+        query_params.append(f"collab=true")
+
+    # Seperate Editions
+    if (query.separate_editions is True):
+        query_params.append(f"separate_editions=true")
 
     #-----------------------------#
     # ---  End Parsing Query  --- #
