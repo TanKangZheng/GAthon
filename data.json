@@ -1,0 +1,293 @@
+{
+    "data": [
+        {
+            "classes": [
+                "RANGER"
+            ],
+            "cost_memory": null,
+            "cost_reserve": 0,
+            "cost": {
+                "type": "reserve",
+                "value": "0"
+            },
+            "created_at": "2026-03-28T03:41:55.711Z",
+            "durability": null,
+            "editions": [
+                {
+                    "card_id": "9hA48XL1xV",
+                    "collector_number": "017",
+                    "configuration": "default",
+                    "created_at": "2026-03-28T03:41:55.711+00:00",
+                    "effect": null,
+                    "effect_raw": null,
+                    "flavor": "No harm reaches Artemis with Apollo’s bow drawn.",
+                    "illustrator": "木叶",
+                    "image": "/cards/images/aRVaQZXLwz.jpg",
+                    "last_update": "2026-04-01T21:11:30.213+00:00",
+                    "orientation": null,
+                    "rarity": 2,
+                    "slug": "lesser-boon-of-apollo-rdop",
+                    "thema_charm_foil": null,
+                    "thema_charm_nonfoil": 18,
+                    "thema_ferocity_foil": null,
+                    "thema_ferocity_nonfoil": 24,
+                    "thema_foil": null,
+                    "thema_grace_foil": null,
+                    "thema_grace_nonfoil": 26,
+                    "thema_mystique_foil": null,
+                    "thema_mystique_nonfoil": 22,
+                    "thema_nonfoil": 112,
+                    "thema_valor_foil": null,
+                    "thema_valor_nonfoil": 22,
+                    "thema_foil_dynamic": false,
+                    "thema_nonfoil_dynamic": false,
+                    "uuid": "aRVaQZXLwz",
+                    "collaborators": [],
+                    "circulationTemplates": [
+                        {
+                            "created_at": "2026-03-28T03:41:55.711+00:00",
+                            "edition_id": "aRVaQZXLwz",
+                            "foil": false,
+                            "kind": "NONFOIL",
+                            "last_update": "2026-03-28T03:41:55.711+00:00",
+                            "name": "RDOP U NF",
+                            "population": 5700,
+                            "population_operator": "≈",
+                            "printing": true,
+                            "uuid": "EjgHhYYTXs",
+                            "variants": []
+                        }
+                    ],
+                    "circulations": [],
+                    "other_orientations": [],
+                    "set": {
+                        "created_at": "2026-03-28T03:41:55.711+00:00",
+                        "id": "1ca21783cd",
+                        "language": "EN",
+                        "last_update": "2026-03-28T03:41:55.711+00:00",
+                        "name": "Radiant Origins: Pantheon",
+                        "prefix": "RDOP",
+                        "release_date": "2026-04-03T00:00:00"
+                    },
+                    "effect_html": null
+                },
+                {
+                    "card_id": "9hA48XL1xV",
+                    "collector_number": "025",
+                    "configuration": "default",
+                    "created_at": "2026-03-29T20:18:42.621+00:00",
+                    "effect": null,
+                    "effect_raw": null,
+                    "flavor": "No harm reaches Artemis with Apollo’s bow drawn.",
+                    "illustrator": "木叶",
+                    "image": "/cards/images/uzXPHASGly.jpg",
+                    "last_update": "2026-03-29T20:18:42.621+00:00",
+                    "orientation": null,
+                    "rarity": 6,
+                    "slug": "lesser-boon-of-apollo-pp1",
+                    "thema_charm_foil": null,
+                    "thema_charm_nonfoil": null,
+                    "thema_ferocity_foil": null,
+                    "thema_ferocity_nonfoil": null,
+                    "thema_foil": null,
+                    "thema_grace_foil": null,
+                    "thema_grace_nonfoil": null,
+                    "thema_mystique_foil": null,
+                    "thema_mystique_nonfoil": null,
+                    "thema_nonfoil": null,
+                    "thema_valor_foil": null,
+                    "thema_valor_nonfoil": null,
+                    "thema_foil_dynamic": false,
+                    "thema_nonfoil_dynamic": false,
+                    "uuid": "uzXPHASGly",
+                    "collaborators": [],
+                    "circulationTemplates": [],
+                    "circulations": [
+                        {
+                            "created_at": "2026-03-29T20:18:42.621+00:00",
+                            "edition_id": "uzXPHASGly",
+                            "foil": true,
+                            "kind": "FOIL",
+                            "last_update": "2026-03-29T20:18:42.621+00:00",
+                            "population": 150,
+                            "population_operator": "≈",
+                            "printing": false,
+                            "uuid": "tjbhEEwpGA",
+                            "variants": []
+                        }
+                    ],
+                    "other_orientations": [],
+                    "set": {
+                        "created_at": "2026-03-29T20:18:42.621+00:00",
+                        "id": "8108532faa",
+                        "language": "EN",
+                        "last_update": "2026-03-29T20:18:42.621+00:00",
+                        "name": "Pantheon Pack 1",
+                        "prefix": "PP1",
+                        "release_date": "2026-03-28T00:00:00"
+                    },
+                    "effect_html": null
+                }
+            ],
+            "effect": "**Level Locked 1** *(Play this card only if your champion’s base level is 1 or higher.)*\n\nYour champion is a Ranger class in addition to their other types.\n",
+            "effect_raw": "Level Locked 1 (Play this card only if your champion’s base level is 1 or higher.)\n\nYour champion is a Ranger class in addition to their other types.\n",
+            "element": "NORM",
+            "elements": [
+                "NORM"
+            ],
+            "flavor": null,
+            "last_update": "2026-04-02T19:55:28.177Z",
+            "legality": {
+                "DRAFT": {
+                    "limit": 0
+                },
+                "STANDARD": {
+                    "limit": 0
+                }
+            },
+            "level": null,
+            "life": null,
+            "name": "Lesser Boon of Apollo",
+            "power": null,
+            "referenced_by": [],
+            "references": [],
+            "result_editions": [
+                {
+                    "card_id": "9hA48XL1xV",
+                    "collector_number": "017",
+                    "configuration": "default",
+                    "created_at": "2026-03-28T03:41:55.711+00:00",
+                    "effect": null,
+                    "effect_raw": null,
+                    "flavor": "No harm reaches Artemis with Apollo’s bow drawn.",
+                    "illustrator": "木叶",
+                    "image": "/cards/images/aRVaQZXLwz.jpg",
+                    "last_update": "2026-04-01T21:11:30.213+00:00",
+                    "orientation": null,
+                    "rarity": 2,
+                    "slug": "lesser-boon-of-apollo-rdop",
+                    "thema_charm_foil": null,
+                    "thema_charm_nonfoil": 18,
+                    "thema_ferocity_foil": null,
+                    "thema_ferocity_nonfoil": 24,
+                    "thema_foil": null,
+                    "thema_grace_foil": null,
+                    "thema_grace_nonfoil": 26,
+                    "thema_mystique_foil": null,
+                    "thema_mystique_nonfoil": 22,
+                    "thema_nonfoil": 112,
+                    "thema_valor_foil": null,
+                    "thema_valor_nonfoil": 22,
+                    "thema_foil_dynamic": false,
+                    "thema_nonfoil_dynamic": false,
+                    "uuid": "aRVaQZXLwz",
+                    "collaborators": [],
+                    "circulationTemplates": [
+                        {
+                            "created_at": "2026-03-28T03:41:55.711+00:00",
+                            "edition_id": "aRVaQZXLwz",
+                            "foil": false,
+                            "kind": "NONFOIL",
+                            "last_update": "2026-03-28T03:41:55.711+00:00",
+                            "name": "RDOP U NF",
+                            "population": 5700,
+                            "population_operator": "≈",
+                            "printing": true,
+                            "uuid": "EjgHhYYTXs",
+                            "variants": []
+                        }
+                    ],
+                    "circulations": [],
+                    "other_orientations": [],
+                    "set": {
+                        "created_at": "2026-03-28T03:41:55.711+00:00",
+                        "id": "1ca21783cd",
+                        "language": "EN",
+                        "last_update": "2026-03-28T03:41:55.711+00:00",
+                        "name": "Radiant Origins: Pantheon",
+                        "prefix": "RDOP",
+                        "release_date": "2026-04-03T00:00:00"
+                    },
+                    "effect_html": null
+                },
+                {
+                    "card_id": "9hA48XL1xV",
+                    "collector_number": "025",
+                    "configuration": "default",
+                    "created_at": "2026-03-29T20:18:42.621+00:00",
+                    "effect": null,
+                    "effect_raw": null,
+                    "flavor": "No harm reaches Artemis with Apollo’s bow drawn.",
+                    "illustrator": "木叶",
+                    "image": "/cards/images/uzXPHASGly.jpg",
+                    "last_update": "2026-03-29T20:18:42.621+00:00",
+                    "orientation": null,
+                    "rarity": 6,
+                    "slug": "lesser-boon-of-apollo-pp1",
+                    "thema_charm_foil": null,
+                    "thema_charm_nonfoil": null,
+                    "thema_ferocity_foil": null,
+                    "thema_ferocity_nonfoil": null,
+                    "thema_foil": null,
+                    "thema_grace_foil": null,
+                    "thema_grace_nonfoil": null,
+                    "thema_mystique_foil": null,
+                    "thema_mystique_nonfoil": null,
+                    "thema_nonfoil": null,
+                    "thema_valor_foil": null,
+                    "thema_valor_nonfoil": null,
+                    "thema_foil_dynamic": false,
+                    "thema_nonfoil_dynamic": false,
+                    "uuid": "uzXPHASGly",
+                    "collaborators": [],
+                    "circulationTemplates": [],
+                    "circulations": [
+                        {
+                            "created_at": "2026-03-29T20:18:42.621+00:00",
+                            "edition_id": "uzXPHASGly",
+                            "foil": true,
+                            "kind": "FOIL",
+                            "last_update": "2026-03-29T20:18:42.621+00:00",
+                            "population": 150,
+                            "population_operator": "≈",
+                            "printing": false,
+                            "uuid": "tjbhEEwpGA",
+                            "variants": []
+                        }
+                    ],
+                    "other_orientations": [],
+                    "set": {
+                        "created_at": "2026-03-29T20:18:42.621+00:00",
+                        "id": "8108532faa",
+                        "language": "EN",
+                        "last_update": "2026-03-29T20:18:42.621+00:00",
+                        "name": "Pantheon Pack 1",
+                        "prefix": "PP1",
+                        "release_date": "2026-03-28T00:00:00"
+                    },
+                    "effect_html": null
+                }
+            ],
+            "rule": [],
+            "slug": "lesser-boon-of-apollo",
+            "speed": false,
+            "subtypes": [
+                "RANGER",
+                "SPELL"
+            ],
+            "types": [
+                "LESSER BOON"
+            ],
+            "uuid": "9hA48XL1xV",
+            "effect_html": "<span class=\"effect__block\"><span class=\"effect__label\">Level Locked 1</span> <span class=\"effect__reminder\">(Play this card only if your champion’s base level is 1 or higher.)</span></span>Your champion is a Ranger class in addition to their other types.\n"
+        }
+    ],
+    "has_more": false,
+    "order": "ASC",
+    "page": 1,
+    "page_size": 30,
+    "paginated_cards_count": 1,
+    "sort": "collector_number",
+    "total_cards": 1,
+    "total_pages": 1
+}

@@ -10,10 +10,10 @@ queryInfo = GAQuery.GAQuery()
 # queryInfo.add_speed(enums.Speed.FAST)
 # queryInfo.add_speed(enums.Speed.SLOW)
 
-queryInfo.add_name("lorraine, spirit ruler")
-queryInfo.add_seperate_editions(True)
+queryInfo.add_name("lesser boon of apollo")
 
-GAQuery.Search(query=queryInfo)
+data = GAQuery.Search(query=queryInfo).get("data")[0]
+
 
 # response = requests.get("https://api.gatcg.com/cards/search?name=kongming&element=TERA")
 # if response.status_code == 200:
