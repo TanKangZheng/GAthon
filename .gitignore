@@ -1,2 +1,7 @@
 # File Extention
 *.pyc
+
+# Folders
+dist/
+build/
+*.egg-info/
