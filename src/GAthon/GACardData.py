@@ -1,4 +1,4 @@
-import enums
+import GAthon.GAEnums as GAEnums
 from dataclasses import dataclass, field
 from typing import Optional
 

@@ -1,6 +1,5 @@
 import GAQuery
-import GACardData
-import enums
+import GAthon.GAEnums as GAEnums
 
 GAQuery.set_client("GAthon", "0.0.1", "tankangzheng@hotmail.com")
 

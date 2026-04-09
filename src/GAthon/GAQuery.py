@@ -1,5 +1,5 @@
 # Helper Libraries
-import enums
+import GAthon.GAEnums as GAEnums
 import json
 import GACardData
 
@@ -50,8 +50,8 @@ class GAQuery:
         return self.__sets
 
     # Elements 
-    __elements: Optional[list[enums.Elements]] = None
-    def add_element(self, element: enums.Elements) -> "GAQuery":
+    __elements: Optional[list[GAEnums.Elements]] = None
+    def add_element(self, element: GAEnums.Elements) -> "GAQuery":
         if (self.__elements is None):
             self.__elements = []
         self.__elements.append(element)
@@ -64,15 +64,15 @@ class GAQuery:
         self.__all_elements = val
         return self
     @property
-    def elements(self) -> Optional[list[enums.Elements]]:
+    def elements(self) -> Optional[list[GAEnums.Elements]]:
         return self.__elements
     @property
     def all_element(self) -> Optional[bool]:
         return self.__all_elements
 
     # Classes
-    __classes: Optional[list[enums.Classes]] = None
-    def add_class(self, ga_class: enums.Classes) -> "GAQuery":
+    __classes: Optional[list[GAEnums.Classes]] = None
+    def add_class(self, ga_class: GAEnums.Classes) -> "GAQuery":
         if (self.__classes is None):
             self.__classes = []
         self.__classes.append(ga_class)
@@ -85,15 +85,15 @@ class GAQuery:
         self.__all_classes = val
         return self
     @property
-    def classes(self) -> Optional[list[enums.Classes]]:
+    def classes(self) -> Optional[list[GAEnums.Classes]]:
         return self.__classes
     @property
     def all_class(self) -> Optional[bool]:
         return self.__all_classes
     
     # Card Types
-    __types: Optional[list[enums.Types]] = None
-    def add_type(self, ga_type: enums.Types) -> "GAQuery":
+    __types: Optional[list[GAEnums.Types]] = None
+    def add_type(self, ga_type: GAEnums.Types) -> "GAQuery":
         if (self.__types is None):
             self.__types = []
         self.__types.append(ga_type)
@@ -106,7 +106,7 @@ class GAQuery:
         self.__all_types = val
         return self
     @property
-    def types(self) -> Optional[list[enums.Types]]:
+    def types(self) -> Optional[list[GAEnums.Types]]:
         return self.__types
     @property
     def all_type(self) -> Optional[bool]:
@@ -125,8 +125,8 @@ class GAQuery:
         return self.__effect
 
     # Rarities
-    __rarities: Optional[list[enums.Rarity]] = None
-    def add_rarity(self, ga_rarity: enums.Rarity) -> "GAQuery":
+    __rarities: Optional[list[GAEnums.Rarity]] = None
+    def add_rarity(self, ga_rarity: GAEnums.Rarity) -> "GAQuery":
         if (self.__rarities is None):
             self.__rarities = []
         self.__rarities.append(ga_rarity)
@@ -135,12 +135,12 @@ class GAQuery:
         self.__rarities = None
         return self
     @property
-    def rarities(self) -> Optional[list[enums.Rarity]]:
+    def rarities(self) -> Optional[list[GAEnums.Rarity]]:
         return self.__rarities
     
     # Card Subtypes
-    __subtypes: Optional[list[enums.Subtypes]] = None
-    def add_subtype(self, ga_subtype: enums.Subtypes) -> "GAQuery":      # Fix #2
+    __subtypes: Optional[list[GAEnums.Subtypes]] = None
+    def add_subtype(self, ga_subtype: GAEnums.Subtypes) -> "GAQuery":      # Fix #2
         if (self.__subtypes is None):
             self.__subtypes = []
         self.__subtypes.append(ga_subtype)
@@ -153,15 +153,15 @@ class GAQuery:
         self.__all_subtypes = val
         return self
     @property
-    def subtypes(self) -> Optional[list[enums.Subtypes]]:
+    def subtypes(self) -> Optional[list[GAEnums.Subtypes]]:
         return self.__subtypes
     @property
     def all_subtype(self) -> Optional[bool]:
         return self.__all_subtypes
     
     # Logical Operations
-    __operations: Optional[list[tuple[enums.LogicParameter, enums.LogicOperator, int]]] = None
-    def add_operation(self, param: enums.LogicParameter, operator: enums.LogicOperator, val:int) -> "GAQuery":
+    __operations: Optional[list[tuple[GAEnums.LogicParameter, GAEnums.LogicOperator, int]]] = None
+    def add_operation(self, param: GAEnums.LogicParameter, operator: GAEnums.LogicOperator, val:int) -> "GAQuery":
         if (self.__operations is None):
             self.__operations = []
         self.__operations.append((param, operator, str(val)))
@@ -175,7 +175,7 @@ class GAQuery:
     
     # Speed
     __speeds: Optional[list[str]] = None
-    def add_speed(self, speed: enums.Speed) -> "GAQuery":
+    def add_speed(self, speed: GAEnums.Speed) -> "GAQuery":
         if (self.__speeds is None):
             self.__speeds = []
         if (len(self.__speeds) == 2):
@@ -191,7 +191,7 @@ class GAQuery:
     
     # Configuration
     __configuration: Optional[list[str]] = None
-    def add_configuration(self, config: enums.Configuration) -> "GAQuery":
+    def add_configuration(self, config: GAEnums.Configuration) -> "GAQuery":
         if (self.__configuration is None):
             self.__configuration = []
         self.__configuration.append(config)
@@ -228,8 +228,8 @@ class GAQuery:
         return self.__illustrator
     
     # Languages
-    __languages: Optional[list[enums.Language]] = None
-    def add_language(self, lang: enums.Language) -> "GAQuery":
+    __languages: Optional[list[GAEnums.Language]] = None
+    def add_language(self, lang: GAEnums.Language) -> "GAQuery":
         if (self.__languages is None):
             self.__languages = []
         self.__languages.append(lang)
@@ -238,7 +238,7 @@ class GAQuery:
         self.__languages = None
         return self
     @property
-    def languages(self) -> Optional[list[enums.Language]]:
+    def languages(self) -> Optional[list[GAEnums.Language]]:
         return self.__languages
     
     # Flavor
@@ -266,15 +266,15 @@ class GAQuery:
         return self.__slug
 
     # Legality
-    __legality: Optional[tuple[enums.Format, enums.Legality]] = None
-    def add_legality(self, format: enums.Format, legality: enums.Legality) -> "GAQuery":
+    __legality: Optional[tuple[GAEnums.Format, GAEnums.Legality]] = None
+    def add_legality(self, format: GAEnums.Format, legality: GAEnums.Legality) -> "GAQuery":
         self.__legality = (format, legality)
         return self
     def clear_legality(self) -> "GAQuery":
         self.__legality = None
         return self
     @property
-    def legality(self) -> Optional[tuple[enums.Format, enums.Legality]]:
+    def legality(self) -> Optional[tuple[GAEnums.Format, GAEnums.Legality]]:
         return self.__legality
     
     # Edition Effect
@@ -560,8 +560,6 @@ def Search(query: GAQuery) -> list[GACardData.GACardData]:
     print(f"Fetching data from {response.url}")
     if (response.status_code == 200):
         data = response.json()
-        with open("data.json", "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
         returnData = []
         cardDataList = data.get("data")
         for cardData in cardDataList:
