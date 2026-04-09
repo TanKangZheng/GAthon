@@ -1,3 +1,3 @@
-from .GAQuery import Search
+from .GAQuery import Search, set_client, GAQuery
 from .GACardData import GACardData
-from . import GAEnums
+from .GAEnums import Elements, Classes, Types, Rarity, Subtypes, LogicOperator, LogicParameter, Speed, Configuration, Language, Format, Legality
