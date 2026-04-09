@@ -1,6 +1,7 @@
 # Helper Libraries
 import enums
 import json
+import GACardData
 
 # # Python Libraries
 import httpx
@@ -427,7 +428,7 @@ class GAQuery:
 
         return printVal
     
-def Search(query: GAQuery) -> dict:
+def Search(query: GAQuery) -> list[GACardData.GACardData]:
 
     if (client is None):
         return
@@ -561,7 +562,11 @@ def Search(query: GAQuery) -> dict:
         data = response.json()
         with open("data.json", "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
-        return data
+        returnData = []
+        cardDataList = data.get("data")
+        for cardData in cardDataList:
+            returnData.append(GACardData.GACardData(cardData))
+        return returnData
     else:
         print("Error fetching response!")
         return None

@@ -1,4 +1,5 @@
 import GAQuery
+import GACardData
 import enums
 
 GAQuery.set_client("GAthon", "0.0.1", "tankangzheng@hotmail.com")
@@ -10,10 +11,10 @@ queryInfo = GAQuery.GAQuery()
 # queryInfo.add_speed(enums.Speed.FAST)
 # queryInfo.add_speed(enums.Speed.SLOW)
 
-queryInfo.add_name("lesser boon of apollo")
+queryInfo.add_name("Lu Bu")
 
-data = GAQuery.Search(query=queryInfo).get("data")[0]
-
+data = GAQuery.Search(query=queryInfo)[0]
+print(data.editions[0].other_orientations[0].editions[0].set_info.name)
 
 # response = requests.get("https://api.gatcg.com/cards/search?name=kongming&element=TERA")
 # if response.status_code == 200:
