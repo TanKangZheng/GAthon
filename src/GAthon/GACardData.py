@@ -1,4 +1,5 @@
-import GAthon.GAEnums as GAEnums
+# Correct - relative import
+from . import GACardData
 from dataclasses import dataclass, field
 from typing import Optional
 

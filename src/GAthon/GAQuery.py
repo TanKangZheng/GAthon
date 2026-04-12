@@ -1,7 +1,7 @@
 # Helper Libraries
-import GAthon.GAEnums as GAEnums
-import json
-import GACardData
+# Correct - relative import
+from . import GACardData
+from . import GAEnums
 
 # # Python Libraries
 import httpx
