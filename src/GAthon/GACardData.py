@@ -551,6 +551,8 @@ class GACardEdition:
         self.illustrator = data.get("illustrator")
         # Image Link
         self.img_link = data.get("image")
+        if (self.img_link is not None):
+            self.img_link = "https://api.gatcg.com" + self.img_link
         # Orientation
         self.orientation = data.get("orientation")
         # Rarity

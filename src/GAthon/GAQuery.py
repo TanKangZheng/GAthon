@@ -13,7 +13,8 @@ from typing import Optional
 client: Optional[httpx.Client] = None
 
 # --- API Params --- #
-api_link = "https://api.gatcg.com/cards/search?"
+api_link = "https://api.gatcg.com"
+query_link = api_link + "/cards/search?"
 
 def set_client(app_name: str, ver: str, contact: str = None):
     global client
@@ -556,7 +557,7 @@ def Search(query: GAQuery) -> list[GACardData.GACardData]:
 
     param_list = "&".join(query_params)
 
-    response = client.get(api_link, params=param_list)
+    response = client.get(query_link, params=param_list)
     print(f"Fetching data from {response.url}")
     if (response.status_code == 200):
         data = response.json()
