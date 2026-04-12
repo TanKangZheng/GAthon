@@ -570,3 +570,7 @@ def Search(query: GAQuery) -> list[GACardData.GACardData]:
         print("Error fetching response!")
         return None
     
+def QuickSearch(name: str) -> list[GACardData.GACardData]:
+    gaQuery = GAQuery()
+    gaQuery.add_name(name)
+    return Search(gaQuery)
