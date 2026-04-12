@@ -148,3 +148,6 @@ queryInfo.add_seperate_editions(True)
 # The result data will be returned as a list of GACardData
 # For more information about the data structure, view DataExamples.py
 result = GAthon.Search(queryInfo)
+
+# To perform a search via name without making any classes, use QuickSearch
+result = GAthon.QuickSearch("Kong Ming, Wayward Maven")
