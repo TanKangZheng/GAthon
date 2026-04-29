@@ -270,6 +270,8 @@ class GACardData:
         self.cost_memory = data.get("cost_memory")
         # CostReserve
         self.cost_reserve = data.get("cost_reserve")
+        # Durability
+        self.durability = data.get("durability")
         # Cost
         cost_data = data.get("cost")
         self.cost = (cost_data.get("type"), cost_data.get("value")) if cost_data is not None else None
